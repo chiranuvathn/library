@@ -32,9 +32,24 @@ function addBookToLibrary() {
         
         myLibrary.push(newBook);
 
-        console.log(myLibrary);
+        displayBook(myLibrary);
     });
 
+}
+
+function displayBook(myLibrary) {
+    const displayCard = document.querySelector('.cards');
+    const div = document.createElement('div');
+
+    myLibrary.forEach((book) => {
+        div.innerHTML = `
+            <span>${book.title}</span>
+            <span>${book.author}</span>
+            <span>${book.pages}</span>
+            <span>${book.isRead}</span>
+          `;
+        displayCard.appendChild(div);
+    }); 
 }
 
 addBookToLibrary();

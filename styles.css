@@ -3,12 +3,19 @@ body {
 }
 
 form {
-    gap: 10px;	
-}
-
-.container {
-    width: 500px;
-    height: 500px;
     border: 1px solid red;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.submit-button {
+    margin-top: 20px;
+}
+
+.cards {
+
+}
